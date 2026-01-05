@@ -10,6 +10,9 @@ userRoutes.post('/login', async (req, res) => {
   return login(req, res);
 });
 
+/** POST /users/register
+ * Register a new user
+ */
 userRoutes.post('/register', async (req, res) => {
   return registerUser(req, res);
 });
