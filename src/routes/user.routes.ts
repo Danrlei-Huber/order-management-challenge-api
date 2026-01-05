@@ -1,12 +1,17 @@
 import { Router } from 'express';
+import { login, registerUser } from '../modules/user/user.service.js';
 
 const userRoutes = Router();
 
-userRoutes.post('/', async (req, res) => {
-  return res.status(201).json({
-    message: 'Usuário criado com sucesso',
-    data: req.body,
-  });
+/** POST /users/login
+ * User login
+ */
+userRoutes.post('/login', async (req, res) => {
+  return login(req, res);
+});
+
+userRoutes.post('/register', async (req, res) => {
+  return registerUser(req, res);
 });
 
 export default userRoutes;

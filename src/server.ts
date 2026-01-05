@@ -7,10 +7,10 @@ async function startServer() {
   try {
     await connectMongo();
     app.listen(3000, () => {
-      console.log('🚀 Servidor rodando');
+      console.log('Servidor rodando');
     });
   } catch (error) {
-    console.error('❌ Erro ao iniciar o servidor:', error);
+    console.error('Erro ao iniciar o servidor:', error);
     process.exit(1);
   }
 }

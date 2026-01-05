@@ -5,9 +5,9 @@ export async function connectMongo(): Promise<void> {
   try {
     await mongoose.connect(env.mongoUri);
 
-    console.log('🍃 MongoDB conectado com sucesso');
+    console.log('MongoDB conectado com sucesso');
   } catch (error) {
-    console.error('❌ Erro ao conectar no MongoDB:', error);
+    console.error('Erro ao conectar no MongoDB:', error);
     process.exit(1);
   }
 }
